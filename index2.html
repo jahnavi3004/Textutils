@@ -1,0 +1,24 @@
+<!--backup of index.html file-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Text Utils</title>
+    </head>
+    <body>
+        <!--
+        this is my first testing template
+        {{ name }} is from {{ place }}
+        --> 
+        <h1>Welcome to the text analyzer.Enter your text below</h1>
+        <form action='/analyze' method='get'>
+            <textarea name='text' style='margin: 0px; width: 904px; height: 114px;'></textarea><br>
+            <input type='checkbox' name='removepunc' style='margin:4px'>Remove Punctuations<br>
+            <input type='checkbox' name='fullcaps' style='margin:4px'>UPPERCASE<br>
+            <input type='checkbox' name='newlineremover' style='margin:4px'>New Line Remover<br>
+            <input type='checkbox' name='extraspaceremover' style='margin:4px'>Extra Space Remover<br>
+            <input type='checkbox' name='charactercounter' style='margin:4px'>Character Counter<br>
+            <button style='margin: 4px; height:40px; width:100px' type='submit'> Analyze Text</button>
+        </form>    
+    </body>
+</html>
