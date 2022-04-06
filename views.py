@@ -2,9 +2,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    #return HttpResponse("Home")
-    #params={'name':'harry', 'place':'USA'}
-    #return render(request, 'index.html', params)  we can pass any context like params and also pass to index.html
     return render(request, 'index.html')
 
 def analyze(request):
@@ -28,7 +25,6 @@ def analyze(request):
                 analyzed = analyzed + char
         params = {'purpose':'Remove Punctuation', 'analyzed_text':analyzed}
         #Analyze the text
-        #return HttpResponse("remove punc")
         return render(request, 'analyze.html', params)
     elif fullcaps == 'on':
         analyzed = ""
@@ -59,17 +55,4 @@ def analyze(request):
         params = {'purpose':'Character Counter', 'analyzed_text':analyzed}  
         return render(request, 'analyze.html', params) 
     else:
-        return HttpResponse("error")
-
-#def capitalizefirst(request):
-#   return HttpResponse("capitalizefirst")
-
-#def newlineremove(request):
-#    return HttpResponse("newlineremove")
-
-#def spaceremove(request):
-    # Back link will render to /(index function) and display Home.
-#    return HttpResponse("spaceremove <a href='/'>Back</a>")  
-
-#def charcount(request):
-#    return HttpResponse("charcount")                    
+        return HttpResponse("error")                    
